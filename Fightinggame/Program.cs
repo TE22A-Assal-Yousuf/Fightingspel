@@ -1,24 +1,39 @@
 ﻿//RNG
-Random genertaotor = new Random();
+Random generaotor = new Random();
 
-int Armour = 20;
-int RNG = genertaotor.Next(10, 100);
-int finaldamage = RNG - Armour;
+//logic bs
 
-if (finaldamage <= 0){
-    Console.WriteLine("you died");
+int damageplayer = generaotor.Next(10, 21);
+int damageenemy = generaotor.Next(10, 21);
+int playerhp = 100;
+int enemyhp = 100;
+
+//start of the game
+
+
+Console.WriteLine($"Select a name!");
+string playername = Console.ReadLine().ToLower();
+
+
+//game loop
+while (playerhp >= 1 || enemyhp >= 1)
+{
+    //play
+    Console.WriteLine($"{playername} do you wish to attack?");
+    string choice = Console.ReadLine(). ToLower();
+    if (choice == "yes")
+    {
+        
+    }
+    else if (choice == "no")
+    {
+
+    }
+    else
+    {
+
+    }
 }
-else{
-    Console.WriteLine(finaldamage);
-}
 
-//Loop
-
-int tal = 100;
-
-while (tal > 0){
-    Console.WriteLine(tal);
-    tal--;
-}
 
 Console.ReadLine();
